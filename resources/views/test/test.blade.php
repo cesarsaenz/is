@@ -27,7 +27,10 @@
     <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
     <script>
-      var socket = io('http://esugarkiss.com:9999');
+      //var socket = io('http://104.236.243.91:9999');
+      var socket = io('http://104.236.243.91:9999', {
+  			'query': 'token=' + 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdF9uYW1lIjoiRm9vYmFyIiwiaWF0IjoxNDM1ODA0NTM4LCJleHAiOjE0MzU4MjI1Mzh9.HKyLWabRZmmy-m73QygvaMFif2-7xmptX3M-5k8E9EQ'
+	  });
       $('form').submit(function(){
         socket.emit('chat message', $('#m').val());
         $('#m').val('');

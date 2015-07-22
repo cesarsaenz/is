@@ -18,3 +18,11 @@ Route::get('/', function () {
 Route::get('/test', function() {
 	return view('test.test');
 });
+
+Route::get('/ical', function() {
+	return view('test.scheduler');
+});
+
+Route::get('login', function() {
+	return view('test.login');
+});
