@@ -23,6 +23,6 @@ Route::get('/ical', function() {
 	return view('test.scheduler');
 });
 
-Route::get('login', function() {
-	return view('test.login');
+Route::get('app', function() {
+	return view('test.crm');
 });

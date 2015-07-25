@@ -27,6 +27,12 @@ Office CRM
   <script src="/js/modules/authentication/services.js"></script>
   <script src="/js/modules/authentication/controllers.js"></script>
 
+  <script src="/js/modules/home/services.js"></script>
+  <script src="/js/modules/home/controllers.js"></script>
+
+  <script src="/js/modules/office/services.js"></script>
+  <script src="/js/modules/office/controllers.js"></script>
+
   <!--
   <script src="/js/modules/home-crm/services.js"></script>
   <script src="/js/modules/home-crm/controllers.js"></script>

@@ -4,8 +4,10 @@ var config =  {
     //apiKey: 'd222f9210e2b4b1b9fe860f160745dd5c954bcd6', //dev
     apiKey: '68e18ad276f1711c88deb0c9b8699a3400ebdb9e', //prod
 
+    officeRecordClass: 'XOfficeClass',
     provider:'Hall', 
-    patientRecordClass: 'Insurance',
+
+    patientRecordClass: 'XOfficeClass',
     visitClass: 'HallVisit',
     providerPath: 'xoffice',
 
@@ -14,11 +16,11 @@ var config =  {
 
 // declare modules
 angular.module('Authentication', []);	
-//angular.module('Home', []).constant('config',config);
-//angular.module('Detail', []).constant('config',config);
+angular.module('Home', []).constant('config',config);
+angular.module('Office', []).constant('config',config);
 
 
-var app = angular.module('app', ['Authentication','ngRoute','ngCookies'])
+var app = angular.module('app', ['Authentication','Home','Office','ngRoute','ngCookies'])
 
 .constant('config', config)
 
@@ -28,11 +30,17 @@ var app = angular.module('app', ['Authentication','ngRoute','ngCookies'])
 		controller: 'LoginController',
 		templateUrl: '/js/'+config.providerPath+'/crm/modules/authentication/views/index.html'
 	})
-    /*
+    
 	.when('/', {
 		controller: 'HomeController',
-		templateUrl: '/js/modules/home-crm/views/home.html'
+		templateUrl: '/js/modules/home/views/index.html'
 	})
+
+    .when('/office/:entryId', {
+        controller: 'OfficeController',
+        templateUrl: '/js/modules/office/views/index.html'
+    })    
+    /*
     .when('/detail/:entryId', {
         controller: 'DetailController',
         templateUrl: '/js/modules/details-crm/views/detail.html'

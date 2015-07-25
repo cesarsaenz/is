@@ -1,0 +1,15 @@
+<p ng-init="init()"><a href="#/login" ng-click="foo()">logout</a></p>
+<h1>Home</h1>
+
+<h3>Office Profile:</h3>
+<ul class="list-group">
+  <li class="list-group-item">{{officeRecord.providerName}}</li>
+  <li class="list-group-item">{{officeRecord.address}}</li>
+  <li class="list-group-item">{{officeRecord.transferPhoneNumber}}</li>
+  <li class="list-group-item">{{officeRecord.emergencyPhoneNumber}}</li>
+  <li class="list-group-item">{{officeRecord.openTime}}</li>
+  <li class="list-group-item">{{officeRecord.lunchTime}}</li>
+  <li class="list-group-item">{{officeRecord.closeTime}}</li>
+</ul>
+<a  ng-click="update()" class="btn btn-primary btn pull-right">Update</a>
+

@@ -1,0 +1,82 @@
+
+<h1 ng-init="init()">{{action}} Office Record</h1>
+
+ <form method="POST" ng-submit="save()" accept-charset="UTF-8" class="form-horizontal" >
+ 	<input name="id" type="hidden" value="1217">
+    <div class="col-md-12">        
+		<div class="well well-sm">
+         	<fieldset>
+            	<legend class="text-center">Office Details</legend>
+
+            <!-- provider name input-->
+            <div class="form-group"> 
+              <label for="providerName" class="col-md-2 control-label">provider name</label> 
+              <div class="col-md-9">
+                <input class="form-control " placeholder="provider name" name="providerName" type="text" ng-model="officeRecord.providerName" id="providerName"> 
+              </div>
+            </div>
+
+            <!-- address input-->
+            <div class="form-group"> 
+              <label for="address" class="col-md-2 control-label">address</label> 
+              <div class="col-md-9">
+                <input class="form-control " placeholder="Address" name="address" type="text" ng-model="officeRecord.address" id="address"> 
+              </div>
+            </div>            
+
+            <!-- transfer phone number input -->
+            <div class="form-group"> 
+              <label for="transferPhoneNumber" class="col-md-2 control-label">transfer phone number</label> 
+              <div class="col-md-9">
+                <input class="form-control " placeholder="transfer phone number" name="transferPhoneNumber" type="text" ng-model="officeRecord.transferPhoneNumber" id="transferPhoneNumber"> 
+              </div>
+            </div> 
+
+            <!-- emergency phone number input -->
+            <div class="form-group"> 
+              <label for="emergencyPhoneNumber" class="col-md-2 control-label">emergency phone number</label> 
+              <div class="col-md-9">
+                <input class="form-control " placeholder="emergency phone number" name="emergencyPhoneNumber" type="text" ng-model="officeRecord.emergencyPhoneNumber" id="emergencyPhoneNumber"> 
+              </div>
+            </div>             
+
+            <!-- open time input-->
+            <div class="form-group"> 
+              <label for="openTime" class="col-md-2 control-label">open time</label> 
+              <div class="col-md-9">
+                <input class="form-control " placeholder="open time" name="openTime" type="text" ng-model="officeRecord.openTime" id="openTime"> 
+              </div>
+            </div>     
+
+            <!-- lunch time input-->
+            <div class="form-group"> 
+              <label for="lunchTime" class="col-md-2 control-label">lunch time</label> 
+              <div class="col-md-9">
+                <input class="form-control " placeholder="lunch time" name="lunchTime" type="text" ng-model="officeRecord.lunchTime" id="lunchTime"> 
+              </div>
+            </div>    
+
+            <!-- close time input-->
+            <div class="form-group"> 
+              <label for="closeTime" class="col-md-2 control-label">close time</label> 
+              <div class="col-md-9">
+                <input class="form-control " placeholder="close time" name="closeTime" type="text" ng-model="officeRecord.closeTime" id="closeTime"> 
+              </div>
+            </div>                                                         
+    
+	                             
+            <!-- Form actions -->
+            <div class="form-group">
+              <div class="col-md-12 text-right">
+                                   
+              <a  ng-click="back()" class="btn btn-default">Cancel</a>
+
+            <button ng-disabled="form.$invalid || saveLoading" type="submit" class="btn btn-primary btn">{{action}}</button>
+<img ng-if="saveLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>            
+              </div>
+            </div>
+          </fieldset>
+
+        </div>
+        </div>
+  </form> 

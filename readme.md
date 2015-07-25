@@ -1,3 +1,33 @@
+1) Create group:
+XOfficeGroup
+6f4b842c-c3db-4678-8039-55ac94ec5b56
+2) Create Office class:
+XOfficeClass
+(address, providerName, transferPhoneNumber,emergencyPhoneNumber,openTime,lunchTime,closeTime)
+3) Add Office class to group
+4) Create Event class:
+XEventClass
+(name, start_date_time, end_date_time)
+5) Add Event class to group
+6) Create Notes class:
+XNotesClass
+(oid, notes)
+7) Add Notes class to group
+
+8*) Create User
+App apikey? 24fb70f2-8f60-4cfc-8b7f-870ec1754cc0
+First name? Staff
+Email? cesar.saenz+is@gmail.com
+Username? isStaff
+Password? pass123
+Type?[patient,staff,provider] is_staff
+Extras?[entryId or apitoken] na
+got back userId: 4e97abf4-cdb4-4ce1-8927-d6a515b1f045
+
+9*) Add User as member of group
+
+
+
     listen 80;
     server_name oncampusapps.com;
     root /home/forge/oncampusapps.com/public;
