@@ -1,0 +1,80 @@
+
+<h1 ng-init="init()">{{action}} Event Record</h1>
+
+ <form method="POST" ng-submit="save()" accept-charset="UTF-8" class="form-horizontal" >
+ 	<input name="id" type="hidden" value="1217">
+    <div class="col-md-12">        
+		<div class="well well-sm">
+         	<fieldset>
+            	<legend class="text-center">Event Details</legend>
+
+            <!-- event name input-->
+            <div class="form-group"> 
+              <label for="providerName" class="col-md-2 control-label">name</label> 
+              <div class="col-md-9">
+                <input class="form-control " placeholder="name" name="name" type="text" ng-model="eventRecord.name" id="name"> 
+              </div>
+            </div>
+
+            <!-- start_date_time input-->
+            <div class="form-group"> 
+              <label for="startDateTime" class="col-md-2 control-label">start date</label> 
+              <div class="col-md-9">
+                <input class="form-control " placeholder="start date" name="startDateTime" type="text" ng-model="eventRecord.startDateTime" id="startDateTime"> 
+              </div>
+            </div>            
+
+            <!-- end_date_time input -->
+            <div class="form-group"> 
+              <label for="endDateTime" class="col-md-2 control-label">end date</label> 
+              <div class="col-md-9">
+                <input class="form-control " placeholder="end date" name="endDateTime" type="text" ng-model="eventRecord.endDateTime" id="endDateTime"> 
+              </div>
+            </div> 
+                                                      
+    
+	                             
+            <!-- Form actions -->
+            <div class="form-group">
+              <div class="col-md-12 text-right">
+                                   
+              <a  ng-click="back()" class="btn btn-default">Cancel</a>
+
+            <button ng-disabled="form.$invalid || saveLoading" type="submit" class="btn btn-primary btn">{{action}}</button>
+<img ng-if="saveLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>            
+              </div>
+            </div>
+          </fieldset>
+
+        </div>
+        </div>
+  </form> 
+
+  <div ng-show="isUpdating">
+<p><a href ng-click="new()">new</a></p>    
+    <h1>Notes</h1>
+      <div class="table-responsive" ng-controller="NotesController" ng-init="init()">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <!--<th>Date</th>-->
+              <th>Note</th>             
+              <th></th>          
+            </tr>
+          </thead>
+          <tbody>
+                
+
+            <tr ng-repeat="note in eventNotes">
+              <!--<td>06-12-2015</td>-->
+              <td>{{note.content.notes}}</td>            
+              <td>
+                <a href="#/noteDetails/{{entryId}}/{{note.entryId}}" >details</a>
+              </td>                                        
+          </tr>       
+                               
+       </tbody>
+     </table>
+
+      </div>    
+  </div>

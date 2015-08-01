@@ -5,25 +5,48 @@ var config =  {
     apiKey: '68e18ad276f1711c88deb0c9b8699a3400ebdb9e', //prod
 
     officeRecordClass: 'XOfficeClass',
-    provider:'Hall', 
-
-    patientRecordClass: 'XOfficeClass',
-    visitClass: 'HallVisit',
+    eventRecordClass: 'XEventClass',
+    noteRecordClass: 'XNotesClass',
     providerPath: 'xoffice',
 
-    appVersion: .7,
+    appVersion: .8,
 };     
 
 // declare modules
 angular.module('Authentication', []);	
 angular.module('Home', []).constant('config',config);
 angular.module('Office', []).constant('config',config);
+angular.module('Events', []).constant('config',config);
+angular.module('EventDetails', []).constant('config',config);
+angular.module('NoteDetails', []).constant('config',config);
 
 
-var app = angular.module('app', ['Authentication','Home','Office','ngRoute','ngCookies'])
+
+var app = angular.module('app', ['Authentication','Home','Office','Events','EventDetails','NoteDetails','ngRoute','ngCookies'])
 
 .constant('config', config)
 
+/*
+.factory('$exceptionHandler', function ($location) {
+            return function (exception, cause) {
+                alert(exception.message);
+                //$location.path('/login');
+            };
+        })
+*/
+
+/*
+.factory('$exceptionHandler', ['$injector', function($injector) {
+
+    var $location;
+
+    return function(exception, cause) {
+        alert(exception.message);
+        $location = $location || $injector.get('$location');
+        $location.path("/login");
+    };
+}])
+*/
 .config(['$routeProvider', function($routeProvider) {
 	$routeProvider
 	.when('/login',{
@@ -39,13 +62,22 @@ var app = angular.module('app', ['Authentication','Home','Office','ngRoute','ngC
     .when('/office/:entryId', {
         controller: 'OfficeController',
         templateUrl: '/js/modules/office/views/index.html'
-    })    
-    /*
-    .when('/detail/:entryId', {
-        controller: 'DetailController',
-        templateUrl: '/js/modules/details-crm/views/detail.html'
+    })
+
+    .when('/events/', {
+        controller: 'EventsController',
+        templateUrl: '/js/modules/events/views/index.html'
     })  
-    */  
+
+    .when('/eventDetails/:entryId', {
+        controller: 'EventController',
+        templateUrl: '/js/modules/eventDetails/views/index.html'
+    })  
+     
+    .when('/noteDetails/:entryId/:nEntryId', {
+        controller: 'NoteController',
+        templateUrl: '/js/modules/noteDetails/views/index.html'
+    }) 
 
 	.otherwise({ redirectTo: '/login'});
 }])

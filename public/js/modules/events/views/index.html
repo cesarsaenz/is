@@ -1,0 +1,31 @@
+<p><a href ng-click="back()">back</a>&nbsp;&nbsp;&nbsp;<a href ng-click="new()">new</a></p>
+<h1>Events</h1>
+
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <!--<th>Date</th>-->
+              <th>Name</th>
+              <th>Start Date</th>
+              <th>End Date</th>               
+              <th></th>          
+            </tr>
+          </thead>
+          <tbody>
+                
+
+            <tr ng-repeat="event in officeEvents">
+              <!--<td>06-12-2015</td>-->
+              <td>{{event.content.name}}</td>
+              <td>{{event.content.startDateTime}}</td> 
+              <td>{{event.content.endDateTime}}</td>               
+              <td>
+                <a href="#/eventDetails/{{event.entryId}}" >details</a>
+              </td>                                        
+          </tr>       
+                               
+       </tbody>
+     </table>
+
+      </div>

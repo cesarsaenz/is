@@ -1,27 +1,29 @@
-angular.module('Home',[])
+angular.module('EventDetails',[])
 
- .factory('OtherService',
+ .factory('NotesService',
     ['$rootScope','$location','config',    
     function ($rootScope,$location,config) {
 
-        var clazz = config.officeRecordClass;
+        var clazz = config.noteRecordClass;
 
         return {
-            getRecords: function() {
-                console.log('called get records');
-            $rootScope.cat.queryClassEntries2(clazz, 'pageSize=100', {},
+            get: function(oid) {
+                console.log('called get notes: '+oid);
+                $rootScope.eventNotes = {};
+            $rootScope.cat.queryClassEntries2(clazz, 'oid='+oid+'&pageSize=100', {},
                 function(success){
                 console.log(success);
-
+                	/*
                     if(_.isEmpty(success)) {
                         $rootScope.officeRecord = {};
-                        console.log('No records found!');
+                        console.log('No events found!');
                         $location.path('/office/na');
                     } else {
                         console.log('Something found!');
                         $rootScope.officeRecord = success[0].content;
-                    }                
-                $rootScope.officeRecords = success;
+                    }  
+					*/
+                $rootScope.eventNotes = success;
                 }, function(error){ console.log('error'); });
         }
         
@@ -29,4 +31,4 @@ angular.module('Home',[])
 
   .factory('_', function() {
         return window._; // assumes underscore has already been loaded on the page
-  }); 
+  });

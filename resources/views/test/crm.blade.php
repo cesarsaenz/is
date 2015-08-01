@@ -33,12 +33,14 @@ Office CRM
   <script src="/js/modules/office/services.js"></script>
   <script src="/js/modules/office/controllers.js"></script>
 
-  <!--
-  <script src="/js/modules/home-crm/services.js"></script>
-  <script src="/js/modules/home-crm/controllers.js"></script>
+  <script src="/js/modules/events/services.js"></script>
+  <script src="/js/modules/events/controllers.js"></script>
 
-  <script src="/js/modules/details-crm/services.js"></script>  
-  <script src="/js/modules/details-crm/controllers.js"></script>
-  -->
+  <script src="/js/modules/eventDetails/services.js"></script>
+  <script src="/js/modules/eventDetails/controllers.js"></script> 
+
+  <script src="/js/modules/noteDetails/services.js"></script>
+  <script src="/js/modules/noteDetails/controllers.js"></script>    
+
 
 @endsection
