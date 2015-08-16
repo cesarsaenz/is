@@ -37,10 +37,19 @@ app.controller('OfficeController', ['$scope','$rootScope','$location','$routePar
              	{'providerName':$scope.officeRecord.providerName,
               	 'address':$scope.officeRecord.address,
               	 'transferPhoneNumber':$scope.officeRecord.transferPhoneNumber,
+                 'fax':$scope.officeRecord.fax,
                  'emergencyPhoneNumber':$scope.officeRecord.emergencyPhoneNumber,
-              	 'openTime':$scope.officeRecord.openTime,
-              	 'lunchTime':$scope.officeRecord.lunchTime,
-              	 'closeTime':$scope.officeRecord.closeTime,
+              	 
+                 'weekDayOpenTime':$scope.officeRecord.weekDayOpenTime,
+                 'weekDayLunchTime':$scope.officeRecord.weekDayLunchTime,
+                 'weekDayCloseTime':$scope.officeRecord.weekDayCloseTime,
+                 'weekEndOpenTime':$scope.officeRecord.weekEndOpenTime,
+                 'weekEndLunchTime':$scope.officeRecord.weekEndLunchTime,
+                 'weekEndCloseTime':$scope.officeRecord.weekEndCloseTime,
+
+                 'openTime':'NA',
+              	 'lunchTime':'NA',
+              	 'closeTime':'NA',
                 },
                 function(success){
                 console.log(success);
@@ -55,10 +64,17 @@ app.controller('OfficeController', ['$scope','$rootScope','$location','$routePar
              	{'providerName':$scope.officeRecord.providerName,
               	 'address':$scope.officeRecord.address,
               	 'transferPhoneNumber':$scope.officeRecord.transferPhoneNumber,
+                 'fax':$scope.officeRecord.fax,
                  'emergencyPhoneNumber':$scope.officeRecord.emergencyPhoneNumber,
-              	 'openTime':$scope.officeRecord.openTime,
-              	 'lunchTime':$scope.officeRecord.lunchTime,
-              	 'closeTime':$scope.officeRecord.closeTime,
+                 'weekDayOpenTime':$scope.officeRecord.weekDayOpenTime,
+                 'weekDayLunchTime':$scope.officeRecord.weekDayLunchTime,
+                 'weekDayCloseTime':$scope.officeRecord.weekDayCloseTime,
+                 'weekEndOpenTime':$scope.officeRecord.weekEndOpenTime,
+                 'weekEndLunchTime':$scope.officeRecord.weekEndLunchTime,
+                 'weekEndCloseTime':$scope.officeRecord.weekEndCloseTime,                 
+              	 'openTime':'NA',
+              	 'lunchTime':'NA',
+              	 'closeTime':'NA',
                 },
                 function(success){
                 console.log(success);

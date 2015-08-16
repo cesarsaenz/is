@@ -5,11 +5,16 @@
 <ul class="list-group">
   <li class="list-group-item">{{officeRecord.providerName}}</li>
   <li class="list-group-item">{{officeRecord.address}}</li>
-  <li class="list-group-item">{{officeRecord.transferPhoneNumber}}</li>
-  <li class="list-group-item">Emergency Phone:{{officeRecord.emergencyPhoneNumber}}</li>
+  <li class="list-group-item">Tel: {{officeRecord.transferPhoneNumber}}</li>
+  <li class="list-group-item">Fax: {{officeRecord.fax}}</li>
+  <li class="list-group-item">Emergency Phone: {{officeRecord.emergencyPhoneNumber}}</li>
+  <li class="list-group-item"><em>Or Have Patient call: (911)</em></li>
+  <li class="list-group-item">Hours of Operation Mon - Fri: {{officeRecord.weekDayOpenTime}} - {{officeRecord.weekDayCloseTime}}</li>
+  <li class="list-group-item">Weekend Hours: {{officeRecord.weekEndOpenTime}} - {{officeRecord.weekEndCloseTime}}</li>  
+  <!--
   <li class="list-group-item">{{officeRecord.openTime}}</li>
   <li class="list-group-item">{{officeRecord.lunchTime}}</li>
-  <li class="list-group-item">{{officeRecord.closeTime}}</li>
+  <li class="list-group-item">{{officeRecord.closeTime}}</li>-->
 </ul>
 <a  ng-click="update()" class="btn btn-primary btn pull-right">Update</a>
 <br /><br /><br />

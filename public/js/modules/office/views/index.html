@@ -30,7 +30,15 @@
               <div class="col-md-9">
                 <input class="form-control " placeholder="transfer phone number" name="transferPhoneNumber" type="text" ng-model="officeRecord.transferPhoneNumber" id="transferPhoneNumber"> 
               </div>
-            </div> 
+            </div>
+
+            <!-- fax number input -->
+            <div class="form-group"> 
+              <label for="transferPhoneNumber" class="col-md-2 control-label">fax number</label> 
+              <div class="col-md-9">
+                <input class="form-control " placeholder="fax number" name="fax" type="text" ng-model="officeRecord.fax" id="fax"> 
+              </div>
+            </div>              
 
             <!-- emergency phone number input -->
             <div class="form-group"> 
@@ -40,31 +48,53 @@
               </div>
             </div>             
 
-            <!-- open time input-->
+            <!-- weekDayOpenTime time input-->
             <div class="form-group"> 
-              <label for="openTime" class="col-md-2 control-label">open time</label> 
+              <label for="weekDayOpenTime" class="col-md-2 control-label">weekday open time</label> 
               <div class="col-md-9">
-                <input class="form-control " placeholder="open time" name="openTime" type="text" ng-model="officeRecord.openTime" id="openTime"> 
+                <input class="form-control " placeholder="weekday open time" name="weekDayOpenTime" type="text" ng-model="officeRecord.weekDayOpenTime" id="weekDayOpenTime"> 
               </div>
             </div>     
 
-            <!-- lunch time input-->
+            <!-- weekDayLunchTime time input-->
             <div class="form-group"> 
-              <label for="lunchTime" class="col-md-2 control-label">lunch time</label> 
+              <label for="weekDayLunchTime" class="col-md-2 control-label">weekday lunch time</label> 
               <div class="col-md-9">
-                <input class="form-control " placeholder="lunch time" name="lunchTime" type="text" ng-model="officeRecord.lunchTime" id="lunchTime"> 
+                <input class="form-control " placeholder="weekDayLunchTime time" name="weekDayLunchTime" type="text" ng-model="officeRecord.weekDayLunchTime" id="weekDayLunchTime"> 
               </div>
             </div>    
 
-            <!-- close time input-->
+            <!-- weekDayCloseTime time input-->
             <div class="form-group"> 
-              <label for="closeTime" class="col-md-2 control-label">close time</label> 
+              <label for="weekDayCloseTime" class="col-md-2 control-label">weekday close time</label> 
               <div class="col-md-9">
-                <input class="form-control " placeholder="close time" name="closeTime" type="text" ng-model="officeRecord.closeTime" id="closeTime"> 
+                <input class="form-control " placeholder="weekday close time" name="weekDayCloseTime" type="text" ng-model="officeRecord.weekDayCloseTime" id="weekDayCloseTime"> 
               </div>
-            </div>                                                         
-    
-	                             
+            </div>
+
+            <!-- weekEndOpenTime time input-->
+            <div class="form-group"> 
+              <label for="weekEndOpenTime" class="col-md-2 control-label">weekend open time</label> 
+              <div class="col-md-9">
+                <input class="form-control " placeholder="weekend open time" name="weekEndOpenTime" type="text" ng-model="officeRecord.weekEndOpenTime" id="weekEndOpenTime"> 
+              </div>
+            </div>     
+
+            <!-- weekEndLunchTime time input-->
+            <div class="form-group"> 
+              <label for="weekEndLunchTime" class="col-md-2 control-label">weekend lunch time</label> 
+              <div class="col-md-9">
+                <input class="form-control " placeholder="weekend lunch time" name="weekEndLunchTime" type="text" ng-model="officeRecord.weekEndLunchTime" id="weekEndLunchTime"> 
+              </div>
+            </div>    
+
+            <!-- weekEndCloseTime time input-->
+            <div class="form-group"> 
+              <label for="weekEndCloseTime" class="col-md-2 control-label">weekend close time</label> 
+              <div class="col-md-9">
+                <input class="form-control" placeholder="weekend close time" name="weekEndCloseTime" type="text" ng-model="officeRecord.weekEndCloseTime" id="weekEndCloseTime"> 
+              </div>
+            </div>                                                                           	                         
             <!-- Form actions -->
             <div class="form-group">
               <div class="col-md-12 text-right">
